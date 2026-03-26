@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:w9_practice_firebase1/data/repositories/artist/artist_repository.dart';
 import 'package:w9_practice_firebase1/model/artist/artist.dart';
+import '../../../../data/repositories/songs/song_repository.dart';
+import '../../../states/player_state.dart';
+import '../../../../model/songs/song.dart';
 import '../../../utils/async_value.dart';
 
 class ArtistViewModel extends ChangeNotifier {
@@ -19,7 +22,7 @@ class ArtistViewModel extends ChangeNotifier {
     fetchArtist();
   }
 
-  void fetchSong() async {
+  void fetchArtist() async {
     // 1- Loading state
     artistValue = AsyncValue.loading();
     notifyListeners();
